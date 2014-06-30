@@ -14,7 +14,9 @@ chef_gem "right_aws" do
   action :install
 end
 require 'right_aws'
-require Opscode::Aws::Ec2
+class Chef::Recipe::default
+  include  Opscode::Aws::Ec2
+end
 aws_ebs_volume "mysql_data_volume" do
   provider "aws_ebs_volume"
   volume_id "vol-524dee17"
