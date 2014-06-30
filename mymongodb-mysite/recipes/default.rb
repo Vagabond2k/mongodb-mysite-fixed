@@ -9,6 +9,12 @@
 
 include_recipe "mongodb::10gen_repo"
 include_recipe "mongodb::default"
+chef_gem "right_aws" do
+  version node['aws']['right_aws_version']
+  action :install
+end
+
+require 'right_aws'
 aws_ebs_volume "mysql_data_volume" do
   provider "aws_ebs_volume"
   volume_id "vol-524dee17"
