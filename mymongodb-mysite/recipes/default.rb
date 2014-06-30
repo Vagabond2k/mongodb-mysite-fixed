@@ -9,6 +9,7 @@
 
 include_recipe "mongodb::10gen_repo"
 include_recipe "mongodb::default"
+include_recipe "opscode-cookbooks::aws"
 aws_ebs_volume "mysql_data_volume" do
   provider "aws_ebs_volume"
   volume_id "vol-524dee17"
