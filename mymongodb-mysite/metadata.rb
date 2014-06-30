@@ -1,4 +1,4 @@
-name             'mongodb-mysite'
+name             'mymongodb-mysite'
 maintainer       'YOUR_NAME'
 maintainer_email 'YOUR_EMAIL'
 license          'All rights reserved'
