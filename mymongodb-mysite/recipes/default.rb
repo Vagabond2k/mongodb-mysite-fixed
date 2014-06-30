@@ -13,7 +13,7 @@ chef_gem "right_aws" do
   version node['aws']['right_aws_version']
   action :install
 end
-
+include Opscode::Aws::Ec2
 require 'right_aws'
 aws_ebs_volume "mysql_data_volume" do
   provider "aws_ebs_volume"
